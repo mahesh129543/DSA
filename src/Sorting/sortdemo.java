@@ -16,7 +16,7 @@ public class sortdemo {
         }
 
 
-        System.out.println("mahesh:"+Arrays.toString(arr));
+        System.out.println("bubblesort:"+Arrays.toString(arr));
     }
     public static void printfun(int[] arr){
         for (int i = 0; i < arr.length ; i++) {
@@ -34,8 +34,10 @@ public class sortdemo {
     public static void selectionSort(int[] arr){
         for (int i = 0; i < arr.length - 1; i++) {
             int minIndex = i;
+            int smallest=arr[i];
             for (int j = i+1; j < arr.length ; j++) {
                 if(arr[j] < arr[minIndex]){
+                    smallest=arr[j];
                     minIndex = j;
                 }
 
@@ -54,7 +56,21 @@ public class sortdemo {
             System.out.print(arr[i]+" ");
 
         }
+        System.out.println();
 
+    }
+    public static void insertionsort(int[] arr){
+        for (int i = 1; i < arr.length; i++) {
+            int temp = arr[i];
+            int j = i-1;
+            while(j >= 0 && temp < arr[j]){
+                arr[j+1] = arr[j];
+                j--;
+            }
+            arr[j+1] = temp;
+        }
+        printfun1(arr);
+        System.out.println("insertion sort:"+Arrays.toString(arr));
     }
 
     public static void main(String[] args) {
@@ -64,7 +80,7 @@ public class sortdemo {
         int[] arr1={8,7,6,9,6,4,8,67,4,6};
         selectionSort(arr1);
         printfun1(arr1);
-
+        insertionsort(arr1);
 
     }
 }
