@@ -26,7 +26,7 @@ public class binarytodecimal {
     }
 
     public static void main(String[] args) {
-        int ans=binarytoDecimal(101111);
+        int ans=binarytoDecimal(1001110);
         System.out.println("ans of the binary to decimal:"+ans);
         int ans1=decimaltoBinary(78);
         System.out.println("ans of the Decimal to binary: "+ans1);
