@@ -3,8 +3,13 @@ package bit_Manipulation;
 import java.math.BigInteger;
 
 public class powerofno {
-    public static int powerofNo(int n,int a) {
-        int ans=1;
+    public static double powerofNo(int n,double a) {
+        double ans=1;
+        boolean neg=false;
+        if(n<0){
+            neg=true;
+            n=-n;
+        }
         while(n>0){
             int last_bit=n&1;
             if(last_bit==1){
@@ -12,7 +17,12 @@ public class powerofno {
             }
             n=n>>1;
             a=a*a;
-        }return ans;
+        }
+        if (true){
+            ans=1/ans;
+        }
+
+        return ans;
 
     }
     public static int powerofNousingmodulo(int n,int a,int p){
@@ -31,7 +41,7 @@ public class powerofno {
         }return (int)ans;
     }
     public static void main(String[] args) {
-        System.out.println(powerofNo(10,2));
+        System.out.println(powerofNo(-2,2.0000));
         System.out.println(powerofNousingmodulo(23,10,2));
         System.out.println(powerofNousingmodulo1(25,10,12));
         System.out.println("another any size of number can using the biginteger object this class" +

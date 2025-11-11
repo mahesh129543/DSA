@@ -1,11 +1,14 @@
 package Sorting;
 
+import java.util.Arrays;
+
 public class countingsearch {
     static void countSearch(int[] arr) {
         int[] freq = new int[12];
         for (int i = 0; i < arr.length; i++) {
             freq[arr[i]]++;
         }
+        System.out.println(Arrays.toString(freq));
         for (int i = 0; i < freq.length; i++) {
             while (freq[i] > 0) {
                 System.out.print(i + ",");
