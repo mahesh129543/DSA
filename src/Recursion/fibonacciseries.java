@@ -2,7 +2,22 @@ package Recursion;
 
 import java.util.Arrays;
 
+
+
+
+
 public class fibonacciseries {
+    public static int fibi(int n){
+        if(n==0){
+            return 0;
+        }
+        if(n==1){
+            return 1;
+        }
+       int  f1=fibi(n-1);
+        int  f2=fibi(n-2);
+        return f1+f2;
+    }
     public static int fibonacci(int n) {
         if (n == 0){
             return 0;
@@ -44,6 +59,8 @@ public class fibonacciseries {
         }
         fibonacci1(n);
         System.out.println("using Array:"+Arrays.toString(fibonacci2(n)));
+
+        System.out.println("this is mahesh "+ fibi(6));
 
 
     }

@@ -64,7 +64,9 @@ public class subarray {
             int sum=0;
             for(int k=i;k<=i+2;k++){
                 sum+=arr[k];
-            }      System.out.println("three element suarray sum:"+sum);
+            }
+            System.out.println("three element suarray sum:"+sum);
+
         }
 
         return 0;
